@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DataFlow – Data Input/Output Controller &mdash; relogic 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="API Reference" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> relogic
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install/index.html">Install Pallas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/index.html">Configure Tasks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DataFlow – Data Input/Output Controller</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">relogic</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">API Reference</a> &raquo;</li>
+        
+      <li>DataFlow – Data Input/Output Controller</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/logickit/dataflow.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dataflow-data-input-output-controller">
+<h1>DataFlow – Data Input/Output Controller<a class="headerlink" href="#dataflow-data-input-output-controller" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="relogic.logickit.dataflow.DataFlow">
+<em class="property">class </em><code class="sig-prename descclassname">relogic.logickit.dataflow.</code><code class="sig-name descname">DataFlow</code><span class="sig-paren">(</span><em class="sig-param">config</em>, <em class="sig-param">tokenizer</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/relogic/logickit/dataflow/dataflow.html#DataFlow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#relogic.logickit.dataflow.DataFlow" title="Permalink to this definition">¶</a></dt>
+<dd><p>DataFlow controls the data process and batch generation.</p>
+<p>The DataFlow adopts examples from Structure or json object.</p>
+<p>Note: Most current implementation is based on BERT model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> (<em>SimpleNamespace</em>) – Configuration for the DataFlow class.</p></li>
+<li><p><strong>tokenizer</strong> – Tokenizer for string tokenization.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="relogic.logickit.dataflow.DataFlow.convert_examples_to_features">
+<em class="property">abstract </em><code class="sig-name descname">convert_examples_to_features</code><span class="sig-paren">(</span><em class="sig-param">examples</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/relogic/logickit/dataflow/dataflow.html#DataFlow.convert_examples_to_features"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#relogic.logickit.dataflow.DataFlow.convert_examples_to_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Basic method abstraction for converting examples to features.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="relogic.logickit.dataflow.DataFlow.endless_minibatches">
+<code class="sig-name descname">endless_minibatches</code><span class="sig-paren">(</span><em class="sig-param">minibatch_size</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/relogic/logickit/dataflow/dataflow.html#DataFlow.endless_minibatches"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#relogic.logickit.dataflow.DataFlow.endless_minibatches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate endless minibatches with given batch size.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="relogic.logickit.dataflow.DataFlow.example_class">
+<em class="property">abstract property </em><code class="sig-name descname">example_class</code><a class="headerlink" href="#relogic.logickit.dataflow.DataFlow.example_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Example class based on the Subclass.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="relogic.logickit.dataflow.DataFlow.get_minibatches">
+<code class="sig-name descname">get_minibatches</code><span class="sig-paren">(</span><em class="sig-param">minibatch_size</em>, <em class="sig-param">sequential=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/relogic/logickit/dataflow/dataflow.html#DataFlow.get_minibatches"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#relogic.logickit.dataflow.DataFlow.get_minibatches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate list of batch size based on examples.</p>
+<p>There are two modes for generating batches. One is sequential,
+which follows the original example sequence in the dataset.
+The other mode is based on bucketing, to save the memory consumption.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>minibatch_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Batch size.</p></li>
+<li><p><strong>sequential</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – To be sequential mode or not.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="relogic.logickit.dataflow.DataFlow.minibatch_class">
+<em class="property">property </em><code class="sig-name descname">minibatch_class</code><a class="headerlink" href="#relogic.logickit.dataflow.DataFlow.minibatch_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the MiniBatch class based on the Subclass.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="relogic.logickit.dataflow.DataFlow.process_example">
+<em class="property">abstract </em><code class="sig-name descname">process_example</code><span class="sig-paren">(</span><em class="sig-param">example</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/relogic/logickit/dataflow/dataflow.html#DataFlow.process_example"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#relogic.logickit.dataflow.DataFlow.process_example" title="Permalink to this definition">¶</a></dt>
+<dd><p>Basic method for example processing. This method needs be implemented
+case by case. For different Subclass, it has different arguments during
+the example processing.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="relogic.logickit.dataflow.DataFlow.size">
+<em class="property">property </em><code class="sig-name descname">size</code><a class="headerlink" href="#relogic.logickit.dataflow.DataFlow.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The size of the dataset.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="relogic.logickit.dataflow.DataFlow.update_with_file">
+<code class="sig-name descname">update_with_file</code><span class="sig-paren">(</span><em class="sig-param">file_name</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/relogic/logickit/dataflow/dataflow.html#DataFlow.update_with_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#relogic.logickit.dataflow.DataFlow.update_with_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read json objects from file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Filename.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="relogic.logickit.dataflow.DataFlow.update_with_jsons">
+<code class="sig-name descname">update_with_jsons</code><span class="sig-paren">(</span><em class="sig-param">examples</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/relogic/logickit/dataflow/dataflow.html#DataFlow.update_with_jsons"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#relogic.logickit.dataflow.DataFlow.update_with_jsons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert json object into Example.</p>
+<p>This method can be used in deployment or training.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>examples</strong> – (List[Dict]): List of json objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="relogic.logickit.dataflow.DataFlow.update_with_structures">
+<code class="sig-name descname">update_with_structures</code><span class="sig-paren">(</span><em class="sig-param">structures</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/relogic/logickit/dataflow/dataflow.html#DataFlow.update_with_structures"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#relogic.logickit.dataflow.DataFlow.update_with_structures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the Structure into Example.</p>
+<p>This method is used during the deployment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>structures</strong> (<em>List</em><em>[</em><em>Structure</em><em>]</em>) – List of Structure.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="API Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Peng Shi
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
